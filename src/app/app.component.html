@@ -34,17 +34,9 @@
 
         </article>
 
-        <article class="card col-lg-10 px-0 shadow mt-4">
-
-            <div class="card-header fw-semibold fs-5">
-              {{titulo}}
-            </div>
-
-            <ul *ngFor="let persona of personas; let i = index" class="list-group list-group-flush fw-semibold">
-              <li class="list-group-item">{{i+1}}. {{persona.nombre}} {{persona.apellidos}}</li>
-            </ul>
-
-        </article>
+        <app-persona *ngFor="let personaElemento of personas; let i = index" [persona] = "personaElemento"
+        [indice] = "i">
+        </app-persona>
 
     </section>
     
