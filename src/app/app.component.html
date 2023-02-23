@@ -6,26 +6,44 @@
 
     <section class="row my-5 justify-content-center">
 
-        <article class="card col-lg-5 px-0 shadow me-lg-4">
+        <article class="card col-lg-10 px-0 shadow">
+
             <div class="card-header">
                 <h3 class="mb-0">Agregar Persona al Listado</h3>
             </div>
+
             <div class="card-body">
-                <form action="">
-                    <input type="text" class="form-control shadow-sm mb-2" placeholder="Ingresar Nombre">
-                    <input type="text" class="form-control shadow-sm" placeholder="Ingresar Apellidos">
-                    <button class="btn btn-primary fw-semibold mt-3 shadow-sm">Agregar Persona</button>
+
+                <form class="row">
+
+                    <div class="col-md-6 col-lg-4">
+                        <input type="text" class="form-control shadow-sm mb-2" [(ngModel)]="nombreInput" placeholder="Ingresar Nombre" id="nombre" name="nombre">
+                    </div>
+
+                    <div class="col-md-6 col-lg-5">
+                        <input type="text" class="form-control shadow-sm mb-2" [(ngModel)]="apellidosInput" placeholder="Ingresar Apellidos" id="apellido" name="apellido">
+                    </div>
+
+                    <div class="col-lg-3 mt-3 mt-lg-0">   
+                        <button type="submit" (click)="agregarPersona()" class="btn btn-primary fw-semibold shadow-sm">Agregar Persona</button>
+                    </div>
+
                 </form>
+
             </div>
+
         </article>
 
-        <article class="card col-lg-5 px-0 shadow mt-4 mt-lg-0">
+        <article class="card col-lg-10 px-0 shadow mt-4">
+
             <div class="card-header fw-semibold fs-5">
               {{titulo}}
             </div>
-            <ul *ngFor="let persona of personas; let i = index" class="list-group list-group-flush fw-semibold" >
-              <li class="list-group-item">{{i}}. {{persona.nombre}} {{persona.apellidos}}</li>
+
+            <ul *ngFor="let persona of personas; let i = index" class="list-group list-group-flush fw-semibold">
+              <li class="list-group-item">{{i+1}}. {{persona.nombre}} {{persona.apellidos}}</li>
             </ul>
+
         </article>
 
     </section>
