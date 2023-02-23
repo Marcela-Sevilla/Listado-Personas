@@ -23,10 +23,8 @@
             <div class="card-header fw-semibold fs-5">
               {{titulo}}
             </div>
-            <ul class="list-group list-group-flush fw-semibold">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+            <ul *ngFor="let persona of personas; let i = index" class="list-group list-group-flush fw-semibold" >
+              <li class="list-group-item">{{i}}. {{persona.nombre}} {{persona.apellidos}}</li>
             </ul>
         </article>
 
