@@ -7,4 +7,7 @@ export class Persona{
     //     this.nombre
     //     this.apellidos
     // }
+    constructor(public nombre:string, public apellidos:string){
+        
+    }
 }
