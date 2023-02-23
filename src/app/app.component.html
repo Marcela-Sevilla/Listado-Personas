@@ -1,1 +1,35 @@
-<h1>hola</h1>
+<header class="bg-warning p-1">
+ <h1 class="text-white">{{titulo}}</h1>
+</header>
+
+<main class="container">
+
+    <section class="row my-5 justify-content-center">
+
+        <article class="card col-lg-5 px-0 shadow me-lg-4">
+            <div class="card-header">
+                <h3 class="mb-0">Agregar Persona al Listado</h3>
+            </div>
+            <div class="card-body">
+                <form action="">
+                    <input type="text" class="form-control shadow-sm mb-2" placeholder="Ingresar Nombre">
+                    <input type="text" class="form-control shadow-sm" placeholder="Ingresar Apellidos">
+                    <button class="btn btn-primary fw-semibold mt-3 shadow-sm">Agregar Persona</button>
+                </form>
+            </div>
+        </article>
+
+        <article class="card col-lg-5 px-0 shadow mt-4 mt-lg-0">
+            <div class="card-header fw-semibold fs-5">
+              {{titulo}}
+            </div>
+            <ul class="list-group list-group-flush fw-semibold">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
+        </article>
+
+    </section>
+    
+</main>
