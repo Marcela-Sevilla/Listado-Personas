@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Persona } from '../persona.model';
 
 @Component({
   selector: 'app-persona',
@@ -8,5 +9,6 @@ import { Component, Input } from '@angular/core';
 export class PersonaComponent {
 
   @Input() persona: Persona;
+  @Input() indice: number;
 
 }
