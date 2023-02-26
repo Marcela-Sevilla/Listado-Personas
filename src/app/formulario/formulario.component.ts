@@ -16,6 +16,7 @@ export class FormularioComponent {
   agregarPersona(){
     let persona1 = new Persona(this.nombreInput, this.apellidosInput);
     //this.personas.push(persona1);
+    this.personaCreada.emit(persona1);
   }
 
 }

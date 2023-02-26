@@ -15,4 +15,8 @@ export class AppComponent {
     new Persona('Daniela', 'Cavadiaz Lopez'),
   ];
 
+  personaAgregada(persona:Persona){
+    this.personas.push(persona);
+  }
+
 }
