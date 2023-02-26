@@ -11,5 +11,8 @@ export class AppComponent {
 
   personas:Persona[] = [];
 
+  personaAgregada(persona:Persona){
+    
+  }
 
 }

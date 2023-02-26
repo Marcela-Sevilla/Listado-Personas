@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
-import { loginService } from '../loginService.service';
+import { loginService } from '../loginService.services';
 import { Persona } from '../persona.model';
 
 @Component({
