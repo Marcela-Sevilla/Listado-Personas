@@ -1,5 +1,6 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { loginService } from '../loginService.services';
+import { personasServices } from '../personasServices.services';
 import { Persona } from '../persona.model';
 
 @Component({
@@ -9,17 +10,18 @@ import { Persona } from '../persona.model';
 })
 export class FormularioComponent {
   
-  @Output() personaCreada = new EventEmitter<Persona>();
 
   @ViewChild('nombreInput') nombreInput:ElementRef;
   @ViewChild('apellidosInput') apellidosInput:ElementRef;
 
-  constructor(private loginService:loginService){}
+  constructor(
+    private loginService:loginService,
+    private personasServices:personasServices){}
 
   agregarPersona(){
     let persona1 = new Persona(this.nombreInput.nativeElement.value, this.apellidosInput.nativeElement.value);
-  this.loginService.enviarMensajeConsola(`Envío de persona: ${persona1.nombre} ${persona1.apellidos}`);
-    this.personaCreada.emit(persona1);
+    this.loginService.enviarMensajeConsola(`Envío de persona: ${persona1.nombre} ${persona1.apellidos}`);
+    this.personasServices.personaAgregada(persona1)
   }
 
 }

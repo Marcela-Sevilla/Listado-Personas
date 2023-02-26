@@ -18,8 +18,4 @@ export class AppComponent implements OnInit{
     this.personas = this.personasServices.personas
   }
 
-  personaAgregada(persona:Persona){
-    this.personasServices.personaAgregada(persona);
-  }
-
 }
