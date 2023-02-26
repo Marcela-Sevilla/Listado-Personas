@@ -10,15 +10,15 @@
             <form class="row">
     
                 <div class="col-md-6 col-lg-4">
-                    <input type="text" class="form-control shadow-sm mb-2" [(ngModel)]="nombreInput" placeholder="Ingresar Nombre" id="nombre" name="nombre">
+                    <input type="text" class="form-control shadow-sm mb-2" #nombreInput placeholder="Ingresar Nombre" id="nombre" name="nombre">
                 </div>
     
                 <div class="col-md-6 col-lg-5">
-                    <input type="text" class="form-control shadow-sm mb-2" [(ngModel)]="apellidosInput" placeholder="Ingresar Apellidos" id="apellido" name="apellido">
+                    <input type="text" class="form-control shadow-sm mb-2" #apellidosInput placeholder="Ingresar Apellidos" id="apellido" name="apellido">
                 </div>
     
                 <div class="col-lg-3 mt-3 mt-lg-0">   
-                    <button type="submit" (click)="agregarPersona()" class="btn btn-primary fw-semibold shadow-sm">Agregar Persona</button>
+                    <button type="submit" (click)="agregarPersona(nombreInput, apellidosInput)" class="btn btn-primary fw-semibold shadow-sm">Agregar Persona</button>
                 </div>
     
             </form>
