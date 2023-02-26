@@ -13,7 +13,11 @@ export class FormularioComponent {
   @ViewChild('nombreInput') nombreInput:ElementRef;
   @ViewChild('apellidosInput') apellidosInput:ElementRef;
 
-  constructor(private personasServices:personasServices){}
+  constructor(private personasServices:personasServices){
+    this.personasServices.saludar.subscribe((indice:number)=>{
+      alert(`El indice es: ${indice+1}`)
+    })
+  }
 
   agregarPersona(){
     let persona1 = new Persona(this.nombreInput.nativeElement.value, this.apellidosInput.nativeElement.value);
