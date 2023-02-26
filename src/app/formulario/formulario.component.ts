@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Persona } from '../persona.model';
 
 @Component({
@@ -8,6 +8,8 @@ import { Persona } from '../persona.model';
 })
 export class FormularioComponent {
   
+  @Output() personaCreada = new EventEmitter<Persona>();
+
   nombreInput:string = '';
   apellidosInput:string = '';
 
