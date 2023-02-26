@@ -5,8 +5,7 @@ import { Persona } from '../persona.model';
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.css'],
-  providers: [loginService]
+  styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
   
