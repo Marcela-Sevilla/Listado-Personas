@@ -9,14 +9,7 @@ import { Persona } from './persona.model';
 export class AppComponent {
   titulo = 'Listado de Personas';
 
-  personas:Persona[] = [
-    new Persona('Marcela', 'Sevilla Lopez'),  
-    new Persona('Natalia', 'Jaller Lopez'), 
-    new Persona('Daniela', 'Cavadiaz Lopez'),
-  ];
+  personas:Persona[] = [];
 
-  personaAgregada(persona:Persona){
-    this.personas.push(persona);
-  }
 
 }
