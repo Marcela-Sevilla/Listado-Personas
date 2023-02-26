@@ -20,7 +20,7 @@ import { personasServices } from './personasServices.services';
   ],
   providers: [
     loginService,
-    personasServices
+    personasServices,
   ],
   bootstrap: [AppComponent]
 })
